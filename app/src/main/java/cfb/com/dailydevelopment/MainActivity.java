@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import cfb.com.dailydevelopment.example1.annotation.TestAnnotationActivity;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private String[] mainItems;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         switch (position) {
             case 0:
-                Toast.makeText(this,"点击了" + position, Toast.LENGTH_LONG).show();
+                startIntent(TestAnnotationActivity.class);
                 break;
             case 1:
                 Toast.makeText(this,"点击了" + position, Toast.LENGTH_LONG).show();
