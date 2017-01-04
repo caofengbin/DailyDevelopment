@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">DailyDevelopment</string>
     <string-array name="main_view_string_array">
-        <item>测试0</item>
+        <item>使用反射机制实现ButterKnife的效果</item>
         <item>测试1</item>
         <item>测试2</item>
         <item>测试3</item>
