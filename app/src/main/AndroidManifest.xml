@@ -8,15 +8,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".example1.annotation.TestAnnotationActivity"
+        <activity
+            android:name=".example1.annotation.TestAnnotationActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".example2.annotation.TestAnnotationActivity2"
                   android:exported="false"
                   android:launchMode="singleTop"
                   android:screenOrientation="portrait">

@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import cfb.com.dailydevelopment.example1.annotation.TestAnnotationActivity;
+import cfb.com.dailydevelopment.example2.annotation.TestAnnotationActivity2;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startIntent(TestAnnotationActivity.class);
                 break;
             case 1:
-                Toast.makeText(this,"点击了" + position, Toast.LENGTH_LONG).show();
+                startIntent(TestAnnotationActivity2.class);
                 break;
         }
     }
