@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import cfb.com.dailydevelopment.example1.annotation.TestAnnotationActivity;
 import cfb.com.dailydevelopment.example2.annotation.TestAnnotationActivity2;
+import cfb.com.dailydevelopment.example3.lifecycle.LifeCycleActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 1:
                 startIntent(TestAnnotationActivity2.class);
+                break;
+            case 2:
+                startIntent(LifeCycleActivity.class);
                 break;
         }
     }
