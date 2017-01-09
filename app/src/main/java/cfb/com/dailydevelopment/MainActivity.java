@@ -11,6 +11,7 @@ import android.widget.ListView;
 import cfb.com.dailydevelopment.example1.annotation.TestAnnotationActivity;
 import cfb.com.dailydevelopment.example2.annotation.TestAnnotationActivity2;
 import cfb.com.dailydevelopment.example3.lifecycle.LifeCycleActivity;
+import cfb.com.dailydevelopment.example4.fragment.UseFragmentActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 2:
                 startIntent(LifeCycleActivity.class);
+                break;
+            case 3:
+                startIntent(UseFragmentActivity.class);
                 break;
         }
     }

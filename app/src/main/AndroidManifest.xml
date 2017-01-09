@@ -29,21 +29,25 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example3.lifecycle.LifeCycleActivity"
-                  android:exported="false"
-                  android:launchMode="singleTop"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".example3.lifecycle.LifeCycleActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example3.lifecycle.NormalActivity"
-                  android:exported="false"
-                  android:launchMode="singleTop"
-                  >
+        <activity
+            android:name=".example3.lifecycle.NormalActivity"
+            android:exported="false"
+            android:launchMode="singleTop">
         </activity>
-        <activity android:name=".example3.lifecycle.DialogActivity"
-                  android:exported="false"
-                  android:launchMode="singleTop"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.AppCompat.Dialog">
+        <activity
+            android:name=".example3.lifecycle.DialogActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
+        <activity android:name=".example4.fragment.UseFragmentActivity">
         </activity>
     </application>
 
