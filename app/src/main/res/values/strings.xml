@@ -5,8 +5,8 @@
         <item>使用apt实现ButterKnife的效果</item>
         <item>Activity生命周期测试</item>
         <item>Fragment使用示例</item>
-        <item>测试4</item>
-        <item>测试5</item>
+        <item>传递Parcelable类型</item>
+        <item>利用Fragment实现大屏适配方案</item>
         <item>测试6</item>
         <item>测试7</item>
         <item>测试8</item>

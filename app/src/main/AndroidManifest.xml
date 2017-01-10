@@ -49,6 +49,10 @@
         </activity>
         <activity android:name=".example4.fragment.UseFragmentActivity">
         </activity>
+        <activity android:name=".example5.parcable.ParcableActivity">
+        </activity>
+        <activity android:name=".example5.parcable.ParcelableActivity">
+        </activity>
     </application>
 
 </manifest>
