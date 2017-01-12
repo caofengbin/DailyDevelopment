@@ -24,6 +24,15 @@ public class UseFragmentActivity extends AppCompatActivity {
             }
         });
         replaceFragment(new RightFragment());
+//        LeftFragment leftFragment = (LeftFragment)getSupportFragmentManager().findFragmentById(R.id.left_fragment);
+//        Button button = (Button)leftFragment.getView().findViewById(R.id.button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                replaceFragment(new AnotherFragment());
+//            }
+//        });
+
     }
 
     private void replaceFragment(Fragment fragment) {
