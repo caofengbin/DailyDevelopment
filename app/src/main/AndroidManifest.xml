@@ -47,11 +47,20 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
-        <activity android:name=".example4.fragment.UseFragmentActivity">
+        <activity android:name=".example4.fragment.UseFragmentActivity"
+                  android:exported="false"
+                  android:launchMode="singleTop"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example5.parcable.ParcableActivity">
+        <activity android:name=".example5.parcable.ParcelableActivity"
+                  android:exported="false"
+                  android:launchMode="singleTop"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example5.parcable.ParcelableActivity">
+        <activity android:name=".example7.textchange.TestChangeActivity"
+                  android:exported="false"
+                  android:launchMode="singleTop"
+                  android:screenOrientation="portrait">
         </activity>
     </application>
 
