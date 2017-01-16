@@ -12,6 +12,7 @@ import cfb.com.dailydevelopment.R;
 
 /**
  * 新闻内容的Fragment
+ * 双页模式的时候会使用该Fragment
  * Created by Administrator on 2017/1/16.
  */
 
@@ -31,7 +32,7 @@ public class NewsContentFragment extends Fragment {
         visibilityLayout.setVisibility(View.VISIBLE);
         TextView newsTitleText = (TextView) view.findViewById (R.id.news_title);
         TextView newsContentText = (TextView) view.findViewById(R.id.news_content);
-        newsTitleText.setText(newsTitle); // 刷新新闻的标题
-        newsContentText.setText(newsContent); // 刷新新闻的内容
+        newsTitleText.setText(newsTitle);                           // 刷新新闻的标题
+        newsContentText.setText(newsContent);                       // 刷新新闻的内容
     }
 }

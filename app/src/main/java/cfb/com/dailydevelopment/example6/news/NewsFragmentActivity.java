@@ -8,6 +8,8 @@ import cfb.com.dailydevelopment.R;
 /**
  * 新闻页面的主Activity
  * 本例子的核心界面
+ * 提供了两个activity_news_fragment布局文件
+ * 会根据系统分辨率的大小进行动态的加载
  */
 public class NewsFragmentActivity extends AppCompatActivity {
 
