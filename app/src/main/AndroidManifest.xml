@@ -47,20 +47,31 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
-        <activity android:name=".example4.fragment.UseFragmentActivity"
-                  android:exported="false"
-                  android:launchMode="singleTop"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".example4.fragment.UseFragmentActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example5.parcable.ParcelableActivity"
-                  android:exported="false"
-                  android:launchMode="singleTop"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".example5.parcable.ParcelableActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example7.textchange.TestChangeActivity"
-                  android:exported="false"
-                  android:launchMode="singleTop"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".example7.textchange.TestChangeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example6.news.NewsFragmentActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".example6.news.NewsContentActivity">
         </activity>
     </application>
 

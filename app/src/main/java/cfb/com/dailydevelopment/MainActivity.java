@@ -18,6 +18,7 @@ import cfb.com.dailydevelopment.example2.annotation.TestAnnotationActivity2;
 import cfb.com.dailydevelopment.example3.lifecycle.LifeCycleActivity;
 import cfb.com.dailydevelopment.example4.fragment.UseFragmentActivity;
 import cfb.com.dailydevelopment.example5.parcable.ParcelableActivity;
+import cfb.com.dailydevelopment.example6.news.NewsFragmentActivity;
 import cfb.com.dailydevelopment.example7.textchange.TestChangeActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(intent);
                 break;
             case 5:
+                startIntent(NewsFragmentActivity.class);
                 break;
             case 6:
                 startIntent(TestChangeActivity.class);
