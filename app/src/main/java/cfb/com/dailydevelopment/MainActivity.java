@@ -8,11 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import cfb.com.dailydevelopment.example1.annotation.TestAnnotationActivity;
 import cfb.com.dailydevelopment.example2.annotation.TestAnnotationActivity2;
 import cfb.com.dailydevelopment.example3.lifecycle.LifeCycleActivity;
@@ -20,6 +15,7 @@ import cfb.com.dailydevelopment.example4.fragment.UseFragmentActivity;
 import cfb.com.dailydevelopment.example5.parcable.ParcelableActivity;
 import cfb.com.dailydevelopment.example6.news.NewsFragmentActivity;
 import cfb.com.dailydevelopment.example7.textchange.TestChangeActivity;
+import cfb.com.dailydevelopment.example8.lanuchmode.FirstActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -57,25 +53,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startIntent(UseFragmentActivity.class);
                 break;
             case 4:
-                InnerType testType1 = new InnerType("a1","a1");
-                InnerType testType2 = new InnerType("a2","a2");
-                InnerType testType3 = new InnerType("a3","a3");
-                List<InnerType> mList = new ArrayList<>();
-                mList.add(testType1);
-                mList.add(testType2);
-                mList.add(testType3);
-
-                HashMap<String, Object> hashMap = new HashMap<>();
-                hashMap.put("key1","第一个值");
-                hashMap.put("key2","第二个值");
-                hashMap.put("key3","第三个值");
-                hashMap.put("keyList",mList);
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("KEY_MAP", hashMap);
-                Intent intent = new Intent(MainActivity.this, ParcelableActivity.class);
-                intent.putExtras(bundle);
-                startActivity(intent);
+                // 测试Serializable与Parcelable的区别的Activity
+                startIntent(ParcelableActivity.class);
                 break;
             case 5:
                 startIntent(NewsFragmentActivity.class);
@@ -83,21 +62,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 6:
                 startIntent(TestChangeActivity.class);
                 break;
+            case 7:
+                startIntent(FirstActivity.class);
+                break;
         }
     }
 
     private void startIntent(Class class1){
         Intent intent = new Intent(MainActivity.this,class1);
         startActivity(intent);
-    }
-
-    public static class InnerType implements Serializable {
-        public String key;
-        public String value;
-
-        public InnerType(String key, String value) {
-            this.key = key;
-            this.value = value;
-        }
     }
 }

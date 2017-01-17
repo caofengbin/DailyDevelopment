@@ -71,7 +71,39 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".example6.news.NewsContentActivity">
+        <activity
+            android:name=".example6.news.NewsContentActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example5.parcable.AcceptValueActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example8.lanuchmode.FirstActivity"
+            android:exported="false"
+            android:label="This is first Activity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example8.lanuchmode.SecondActivity"
+            android:exported="false"
+            android:label="This is second Activity"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.cfb.task1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".example8.lanuchmode.ThirdActivity"
+                  android:exported="false"
+                  android:label="This is third Activity"
+                  android:launchMode="singleTop"
+                  android:taskAffinity="com.cfb.task1"
+                  android:screenOrientation="portrait">
         </activity>
     </application>
 

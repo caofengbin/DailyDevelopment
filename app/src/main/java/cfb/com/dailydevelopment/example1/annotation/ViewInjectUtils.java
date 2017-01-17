@@ -46,7 +46,9 @@ public class ViewInjectUtils {
                 int viewId = viewInject.value();
                 View view = activity.findViewById(viewId);
                 try {
+                    // 允许访问私有字段
                     field.setAccessible(true);
+                    // 将获得指定id的View设置给使用了@ViewInject的field。
                     field.set(activity,view);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();

@@ -7,4 +7,19 @@
     android:layout_height="match_parent"
     tools:context="cfb.com.dailydevelopment.example5.parcable.ParcelableActivity">
 
+    <Button
+        android:id="@+id/use_serializable_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用Serializable传递"
+        />
+
+    <Button
+        android:id="@+id/use_parcelable_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/use_serializable_btn"
+        android:text="使用parcelable传递"
+        />
+
 </RelativeLayout>
