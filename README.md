@@ -1,9 +1,36 @@
 # DailyDevelopment
-This repository is used for my daily learn and keep some useful code in order to use latest.
+
+该项目主要记录平时学习过程中的一些零碎知识点，具体目录如下：
 
 ## 1.使用反射机制实现ButterKnife的效果
 
 &emsp;&emsp;通过反射的方式，实现了@OnClick,@ContentView,@ViewInject,三个注解，并使用ViewInjectUtil进行注解的解析，实现类似ButterKnife的相关效果。
+
+大致效果如下：
+
+``` java
+@ContentView(R.layout.activity_test_annoattion)
+public class TestAnnotationActivity extends AppCompatActivity {
+
+    @ViewInject(R.id.testButton)
+    private Button mButton;
+
+    @OnClick(R.id.testButton)
+    private void onClick(View view) {
+        mButton.setText("我是click后的文字内容");
+        Toast.makeText(this, "按钮被点击了", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ViewInjectUtils.inject(this);
+        mButton.setText("我是click前的Button内容");
+    }
+}
+```
+
+
 
 ## 2.利用apt技术实现ButterKnife的效果
 

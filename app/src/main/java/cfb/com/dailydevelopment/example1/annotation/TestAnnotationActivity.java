@@ -26,5 +26,4 @@ public class TestAnnotationActivity extends AppCompatActivity {
         ViewInjectUtils.inject(this);
         mButton.setText("我是click前的Button内容");
     }
-
 }
