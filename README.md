@@ -30,15 +30,96 @@ public class TestAnnotationActivity extends AppCompatActivity {
 }
 ```
 
+详细实现细节主要看ViewInjectUtils类文件中的inject方法。
 
 
 ## 2.利用apt技术实现ButterKnife的效果
+
+实现技术主要借鉴文章->[ANNOTATION PROCESSING](http://hannesdorfmann.com/annotation-processing/annotationprocessing101)中的内容，原作者基于apt技术实现了一个实现工厂模式的注解，内容很详细，是学习apt技术很好的资料。
 
 ## 3.Activity生命周期测试
 
 ## 4.Fragment生命周期测试
 
 ## 5.Serializable与Parcelable的区别
+
+演示两个Activity之间传递自定义对象的两种方式，一种是通过Serializable，一种是通过Parcelable。
+接收的方法依次是：
+
+``` java
+
+// 获取序列化对象类型
+Person tempPerson = (Person) getIntent().getSerializableExtra("serializableObject");
+// 获取Parcelable对象的类型
+Person2 tempPerson2 = getIntent().getParcelableExtra("ParcelableObject");
+
+```
+
+实现Parcelable接口的一个比较标准的方式可以参见如下代码：
+
+``` java
+
+public class Person2 implements Parcelable {
+
+    private String name;
+    private int age;
+
+    public Person2() {
+
+    }
+
+    public Person2(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public int describeContents() {
+        // 该方法直接返回0
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeInt(age);
+    }
+
+    public static final Parcelable.Creator<Person2> CREATOR
+            = new Parcelable.Creator<Person2>() {
+
+        @Override
+        public Person2 createFromParcel(Parcel in) {
+            Person2 person = new Person2();
+            person.name = in.readString();
+            person.age = in.readInt();
+            return  person;
+        }
+
+        @Override
+        public Person2[] newArray(int size) {
+            return new Person2[size];
+        }
+    };
+}
+
+```
 
 ## 6.一个简易版的新闻应用
 
