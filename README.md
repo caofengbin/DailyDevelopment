@@ -55,7 +55,7 @@ Person2 tempPerson2 = getIntent().getParcelableExtra("ParcelableObject");
 
 ```
 
-实现Parcelable接口的一个比较标准的方式可以参见如下代码：
+**实现Parcelable接口的一个比较标准的方式**可以参见如下代码：
 
 ``` java
 
@@ -122,6 +122,13 @@ public class Person2 implements Parcelable {
 ```
 
 ## 6.一个简易版的新闻应用
+
+&emsp;&emsp;该部分的内容主要基于《第一行代码》一书中的2.4.5节内容--“Fragment的最佳实践，一个简易版的新闻应用”为蓝本进行实现的。实现了一个同一套代码支持手机和平板的不同UI显示的目的。主要的几个技术实现细节包括：
+
+> * 使用最小宽度限定符技术--创建一个layout-sw600dp的文件夹，为主Activity写了两个不同的xml布局文件，但同名均为activity_main，前者只有一个Framgent，后者xml文件上引用了两个Fragment；
+> * 设定isTwoPane变量来标示是单页模式还是双页模式，具体的区分通过判断主Activity加载的那个activity_main文件来判断，而后根据isTwoPane的不同设置不同的监听跳转，实现手机与平板的兼容。
+
+本书4.4.1节有关**限定符**的使用实现动态加载布局的效果值得学习回味。
 
 ## 7.TextChangerListener的简单使用
 
