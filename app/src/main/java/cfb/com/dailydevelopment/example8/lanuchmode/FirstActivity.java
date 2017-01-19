@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 import cfb.com.dailydevelopment.R;
+import cfb.com.dailydevelopment.example9.bestactivity.BaseActivity;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     private static final String TAG = "activity";
 

@@ -1,6 +1,6 @@
 # DailyDevelopment
 
-该项目主要记录平时学习过程中的一些零碎知识点，具体目录如下：
+该项目主要记录平时学习过程中的一些零碎知识点(2017年1月相关)，具体目录如下：
 
 ## 1.使用反射机制实现ButterKnife的效果
 
@@ -36,10 +36,26 @@ public class TestAnnotationActivity extends AppCompatActivity {
 ## 2.利用apt技术实现ButterKnife的效果
 
 实现技术主要借鉴文章->[ANNOTATION PROCESSING](http://hannesdorfmann.com/annotation-processing/annotationprocessing101)中的内容，原作者基于apt技术实现了一个实现工厂模式的注解，内容很详细，是学习apt技术很好的资料。
+前两个tips给单独的抽取到了项目[分别基于反射和apt技术实现模拟ButterKnife的效果](https://github.com/caofengbin/SimulationButterKnife)中。
 
 ## 3.Activity生命周期测试
 
+本节内容主要基于《Android开发艺术探索》第一章的内容进行，内容虽然简单，但是在日常开发中很关键，需要定期的review其中的内容。
+
+[原图的链接](https://github.com/xxv/android-lifecycle)
+
+<center>
+![一个很好的生命周期示意图](https://raw.githubusercontent.com/xxv/android-lifecycle/master/complete_android_fragment_lifecycle.png)
+</center>
+
 ## 4.Fragment生命周期测试
+
+本部分内容主要基于《第一行代码》一书中第四章相关内容的学习，感觉比较重要的知识点包括：
+
+> * **FramentManager相关的一系列流程的整体使用**，在很多场景都用的到；
+> * FragmentManager.addToBackStack这一方法模拟返回栈的效果；
+> * 4.2.4节，**Fragment与Activity之间的通信方式**，很重要；
+> * 限定符相关的技术；
 
 ## 5.Serializable与Parcelable的区别
 
@@ -132,6 +148,8 @@ public class Person2 implements Parcelable {
 
 ## 7.TextChangerListener的简单使用
 
+主要作用就是用于验证TextView中输入的内容是否合法，做参数校验。本demo中给的不全，实际使用的时候再根据文档来看，感觉是很实用的功能。
+
 ## 8.Activity的各个LaunchMode测试
 
 &emsp;&emsp;通过指定android:launchMode属性，可以为standard,singleTop,singleTask,singleInstance四种属性。
@@ -148,3 +166,21 @@ public class Person2 implements Parcelable {
 > * (3)“singleTask”和“singleInstance”模式只在一个方面有差异： “singleTask”Activity 允许其他 Activity 成为其任务的组成部分。 它始终位于其任务的根位置，但其他 Activity（必然是“standard”和“singleTop”Activity）可以启动到该任务中。 相反，“singleInstance”Activity 则不允许其他 Activity 成为其任务的组成部分。它是任务中唯一的 Activity。 如果它启动另一个 Activity，系统会将该 Activity 分配给其他任务 — 就好像 Intent 中包含 FLAG_ACTIVITY_NEW_TASK 一样。
 
 关于launchMode使用的一个详细博客可以参见这篇，非常的详细：[Android中Activity四种启动模式和taskAffinity属性详解](http://blog.csdn.net/zhangjg_blog/article/details/10923643)
+
+## 9.Activity的最佳实践
+
+郭霖《第二行代码》一书中的Activigy一章最后的小结，三个tips感觉都很赞，
+
+> * 构造一个BaseActivity，用于管理整个项目中的Activity，实际开发中用处很大，有很多的发挥空间；
+> * 启动Activity的最佳实践；
+
+``` java
+	public static void actionStart(Context context,String data1,String data2) {
+        Intent intent = new Intent(context,ThirdActivity.class);
+        intent.putExtra("parameter1",data1);
+        intent.putExtra("parameter2",data2);
+        context.startActivity(intent);
+    }
+```
+
+给待启动的Activity中增加一个静态方法，用于启动该Activity的外界调用。
